@@ -31,6 +31,13 @@ body {
   list-style: none;
 }
 
+.container {
+  margin-left: auto;
+  margin-right: auto;
+  width: 1200px;
+  outline: 2px solid tomato;
+}
+
 /* Logo */
 .logo {
   color: var(--logo-second-color);
@@ -157,6 +164,8 @@ span {
   line-height: 1.88;
   letter-spacing: 0.06em;
   cursor: pointer;
+  border-radius: 4px;
+  /* text-align: center; */
 }
 
 .button.filter {
@@ -166,18 +175,23 @@ span {
   line-height: 1.62;
   text-align: center;
   letter-spacing: 0.03em;
+  padding: 6px 22px;
 }
 
 .button.primary {
   color: var(--white-color);
   background-color: var(--accent-color);
   cursor: pointer;
+  padding: 10px 32px;
 }
 
 .button:hover,
 .button:focus {
   color: var(--white-color);
   background-color: var(--accent-color);
+  /* По макету сторінки ПОРТФОЛІО кнопки мають розширюватись при наведенні
+  на них, але тоді це биває верстку кнопки на сторінці СТУДІЯ */
+  /* padding: 6px 25px; */
 }
 
 /* PORTFOLIO PAGE */
