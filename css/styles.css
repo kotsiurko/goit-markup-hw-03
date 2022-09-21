@@ -29,16 +29,24 @@ body {
 
 .list {
   list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.title,
+.text {
+  margin-top: 0;
+  margin-bottom: 0;
 }
 
 .container {
   margin-left: auto;
   margin-right: auto;
   width: 1200px;
-  outline: 2px solid tomato;
+  padding: 0 15px;
 }
 
-/* Logo */
+/* ----------------- LOGO ------------------- */
 .logo {
   color: var(--logo-second-color);
   font-family: Raleway;
@@ -47,6 +55,7 @@ body {
   line-height: 1.19;
   letter-spacing: 0.03em;
   text-decoration: none;
+  margin-right: 93px;
 }
 
 .logo:hover,
@@ -58,8 +67,29 @@ span {
   color: var(--accent-color);
 }
 
-/* site navigation */
+/* ----------------- SITE NAVIGATION ------------------- */
+header {
+  border: 1px solid #ececec;
+}
+
+.header-nav {
+  display: flex;
+  align-items: center;
+}
+
+.site-nav {
+  display: flex;
+}
+
+.site-nav .item:not(:last-child) {
+  margin-right: 40px;
+}
+
 .site-nav .link {
+  display: block;
+  padding-top: 32px;
+  padding-bottom: 32px;
+
   color: var(--text-color-secondary);
   font-weight: 500;
   line-height: 1.14;
@@ -76,9 +106,13 @@ span {
   color: var(--accent-color);
 }
 
-/* site-contacts */
+/* ----------------- SITE CONTACTS ------------------- */
+.site-contacts {
+  display: flex;
+  margin-left: auto;
+}
+
 .site-contacts a {
-  /* color: var(--text-color-secondary); */
   color: var(--text-color-primary);
   font-weight: 500;
   line-height: 1.14;
@@ -86,12 +120,27 @@ span {
   text-decoration: none;
 }
 
+.site-contacts .item + .item {
+  margin-left: 50px;
+}
+
 .site-contacts a:hover {
   color: var(--accent-color);
 }
 
-/* Section */
+/* ----------------- SECTIONS ------------------- */
+.section {
+  padding-top: 94px;
+  padding-bottom: 94px;
+}
+
+.section.works {
+  padding-top: 0;
+}
+
 .section-title {
+  margin-top: 0;
+  margin-bottom: 50px;
   color: var(--text-color-secondary);
   font-weight: 700;
   font-size: 36px;
@@ -99,46 +148,120 @@ span {
   text-align: center;
 }
 
-/* Hero */
+/* ----------------- Section HERO ------------------- */
 .hero {
   background-color: var(--bg-color-secondary);
+  text-align: center;
 }
 .hero-title {
+  margin-top: 0;
+  margin-bottom: 30px;
   color: var(--white-color);
   font-weight: 900;
   font-size: 44px;
   line-height: 1.36;
-  text-align: center;
   letter-spacing: 0.06em;
   text-transform: uppercase;
 }
 
-/* Features */
+/* ----------------- Section FEATURES ------------------- */
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+.feature-list {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.feature-list li {
+  width: 270px;
+}
+
+.feature-list li + li {
+  margin-left: 30px;
+}
+
 .feature-list .title {
   color: var(--text-color-secondary);
   font-weight: 700;
   font-size: 14px;
   line-height: 1.14;
   text-transform: uppercase;
+  margin-top: 0;
+  margin-bottom: 10px;
 }
 
 .feature-list .text {
-  /* font-size: 14px; */
   line-height: 1.71;
+  margin-top: 0;
+  margin-bottom: 0;
 }
 
-/* Examples */
+/* WORKS */
+.work-list {
+  display: flex;
+}
+
+.work-list .item {
+  margin: 0 30px 30px 0;
+}
+.work-list .item:nth-child(3n) {
+  margin-right: 0;
+}
+
+.work-list .item:nth-last-child(-n + 3) {
+  margin-bottom: 0;
+}
+
 .work-list .title {
   color: var(--text-color-secondary);
 }
 
-/* Team */
+/* ----------------- Section TEAM ------------------- */
 .team {
   background-color: var(--bg-color-primary);
 }
 
 .team li {
   background-color: var(--white-color);
+}
+
+.team-list {
+  display: flex;
+}
+
+.team-list .item {
+  margin: 0 30px 30px 0;
+  border-radius: 4px;
+}
+
+.team-list .item:nth-child(4n) {
+  margin-right: 0;
+}
+
+.team-list .item:nth-last-child(-n + 4) {
+  margin-bottom: 0;
+}
+
+.team-list .text {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.team-list .title {
+  margin-top: 0;
+  margin-bottom: 10px;
 }
 
 .team-list .title {
@@ -155,7 +278,11 @@ span {
   text-align: center;
 }
 
-/* buttons */
+.team-description {
+  padding: 20px 24px;
+}
+
+/* ----------------- BUTTONS ------------------- */
 .button {
   color: var(--text-color-secondary);
   background-color: var(--bg-color-primary);
@@ -164,8 +291,8 @@ span {
   line-height: 1.88;
   letter-spacing: 0.06em;
   cursor: pointer;
+  border: transparent;
   border-radius: 4px;
-  /* text-align: center; */
 }
 
 .button.filter {
@@ -189,12 +316,30 @@ span {
 .button:focus {
   color: var(--white-color);
   background-color: var(--accent-color);
-  /* По макету сторінки ПОРТФОЛІО кнопки мають розширюватись при наведенні
-  на них, але тоді це биває верстку кнопки на сторінці СТУДІЯ */
+  /* !?! По макету сторінки ПОРТФОЛІО кнопки мають розширюватись при наведенні
+  на них, але цей ефект виглядає жахливо і ще й збиває верстку кнопки на сторінці СТУДІЯ */
   /* padding: 6px 25px; */
 }
 
-/* PORTFOLIO PAGE */
+/* ----------------- PORTFOLIO PAGE ------------------- */
+.portfolio .container {
+  padding: 94px 0;
+}
+
+.portfolio .list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.portfolio .button-list {
+  margin-bottom: 50px;
+}
+
+.button-list li {
+  padding-right: 8px;
+}
+
 .portfolio-list .title {
   color: var(--text-color-secondary);
   font-weight: 700;
@@ -209,9 +354,32 @@ span {
   letter-spacing: 0.03em;
 }
 
-/* footer */
+.portfolio-description {
+  padding: 20px 24px;
+}
+
+.flex-element {
+  /* !?! Не розумію, чому так получилось, що коли 
+   задаю явно розміри цього блоку, то рамка з'їжджає.
+   Коли прибрав розміри, то тоді рамка стала на своє місце. */
+  /* width: 370px;  */
+  /* width: calc((100% - 60px) / 3); */
+  margin: 0 30px 30px 0;
+  border: 1px solid #eeeeee;
+}
+
+.flex-element:nth-child(3n) {
+  margin-right: 0;
+}
+
+.flex-element:nth-last-child(-n + 3) {
+  margin-bottom: 0;
+}
+
+/* ----------------- FOOTER ------------------- */
 footer {
   background-color: var(--bg-color-secondary);
+  padding: 60px 0;
 }
 
 footer .logo {
@@ -238,4 +406,16 @@ footer .link {
 .footer-contacts .link:hover,
 .footer-contacts .link:focus {
   color: var(--accent-color);
+}
+
+address {
+  padding-top: 20px;
+}
+
+address li {
+  padding-bottom: 9px;
+}
+
+address li:last-of-type {
+  padding-bottom: 0;
 }
