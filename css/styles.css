@@ -27,6 +27,12 @@ body {
   font-size: 14px;
 }
 
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
 .list {
   list-style: none;
   padding: 0;
@@ -69,7 +75,7 @@ span {
 
 /* ----------------- SITE NAVIGATION ------------------- */
 header {
-  border: 1px solid #ececec;
+  border-bottom: 1px solid #ececec;
 }
 
 .header-nav {
@@ -82,7 +88,7 @@ header {
 }
 
 .site-nav .item:not(:last-child) {
-  margin-right: 40px;
+  margin-right: 50px;
 }
 
 .site-nav .link {
@@ -152,10 +158,12 @@ header {
 .hero {
   background-color: var(--bg-color-secondary);
   text-align: center;
+  padding: 200px 0;
 }
+
 .hero-title {
-  margin-top: 0;
-  margin-bottom: 30px;
+  width: 696px;
+  margin: 0 auto 30px;
   color: var(--white-color);
   font-weight: 900;
   font-size: 44px;
@@ -279,7 +287,7 @@ header {
 }
 
 .team-description {
-  padding: 20px 24px;
+  padding: 30px 24px;
 }
 
 /* ----------------- BUTTONS ------------------- */
@@ -316,24 +324,19 @@ header {
 .button:focus {
   color: var(--white-color);
   background-color: var(--accent-color);
-  /* !?! По макету сторінки ПОРТФОЛІО кнопки мають розширюватись при наведенні
-  на них, але цей ефект виглядає жахливо і ще й збиває верстку кнопки на сторінці СТУДІЯ */
-  /* padding: 6px 25px; */
 }
 
 /* ----------------- PORTFOLIO PAGE ------------------- */
-.portfolio .container {
-  padding: 94px 0;
-}
 
 .portfolio .list {
   display: flex;
   flex-wrap: wrap;
-  justify-content: center;
+  /* justify-content: center; */
 }
 
 .portfolio .button-list {
   margin-bottom: 50px;
+  justify-content: center;
 }
 
 .button-list li {
@@ -356,16 +359,15 @@ header {
 
 .portfolio-description {
   padding: 20px 24px;
+  border-left: 1px solid #eeeeee;
+  border-right: 1px solid #eeeeee;
+  border-bottom: 1px solid #eeeeee;
 }
 
 .flex-element {
-  /* !?! Не розумію, чому так получилось, що коли 
-   задаю явно розміри цього блоку, то рамка з'їжджає.
-   Коли прибрав розміри, то тоді рамка стала на своє місце. */
   /* width: 370px;  */
-  /* width: calc((100% - 60px) / 3); */
+  width: calc((100% - 60px) / 3);
   margin: 0 30px 30px 0;
-  border: 1px solid #eeeeee;
 }
 
 .flex-element:nth-child(3n) {
@@ -409,13 +411,13 @@ footer .link {
 }
 
 address {
-  padding-top: 20px;
+  margin-top: 20px;
 }
 
 address li {
-  padding-bottom: 9px;
+  margin-bottom: 9px;
 }
 
 address li:last-of-type {
-  padding-bottom: 0;
+  margin-bottom: 0;
 }
